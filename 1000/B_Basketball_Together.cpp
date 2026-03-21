@@ -21,7 +21,7 @@ int main(){
             ans++;
             j--;
         }
-       else if(i+c < j){
+       else if(i+c <= j){
             i+=c;
             ans++;
             j--;
