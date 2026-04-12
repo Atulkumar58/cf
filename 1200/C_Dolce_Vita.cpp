@@ -6,7 +6,7 @@ int main(){
     int t;
     cin>>t;
     while(t--){
-        int n,x;
+        long long n,x;
         cin>>n>>x;
         vector<int> a(n);
         for(int& i: a) cin>>i;
@@ -16,9 +16,8 @@ int main(){
         long long ans=0;
         for(int i=0; i<n; i++){
             sum+=a[i];
-            int t=((x-sum)/(i+1)) +1;
-            if(t>0) ans+= t;
-            // cout<<ans<<" ";
+            // long long t= ((x-sum)/(i+1))+1;
+            if(sum <= x) ans += ((x-sum)/(i+1))+1;
         }
         cout<<ans<<endl;
     }
