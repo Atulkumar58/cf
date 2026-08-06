@@ -3,6 +3,7 @@
 #include <algorithm>
 #include <unordered_map>
 #include <climits>
+#include <map>
 
 using namespace std;
 
@@ -14,14 +15,14 @@ int main(){
         cin>>n;
         vector<long long> b(n);
         vector<long long> a(n);
-        unordered_map<long long, int> mp;
+        map<long long, int> mp;
         for(long long& i: a) {
             cin>>i;
             mp[i]++;
         }
         b= a;
         sort(a.begin(), a.end());
-        unordered_map<long long, long long> mp2;
+        map<long long, long long> mp2;
 
         
         bool possible = 1;
